@@ -11,7 +11,7 @@ import urllib
 import urllib.error
 import praw
 data=[]
-reddit=praw.Reddit(client_id="8o9phRKrPVbhyg",client_secret="lOpKe_TmeC7Ei_KC18JVqkO-mHA",user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36")
+reddit=praw.Reddit(client_id="your_client_id",client_secret="your_client_secret",user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36")
 
 def top(bot, update,args):
     evaluate(bot,update,args) 
@@ -86,7 +86,7 @@ def postdata(bot,update,hotsub):
             count+=1
 
 def main():
-    updater = Updater('1153130120:AAG06i_LlSe2LtuOEGWyELUPcu5UVV0lPfU')                    
+    updater = Updater('your_telegram_bot_token')                    
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('top',top,pass_args=True))
     dp.add_handler(CommandHandler('hot',hot,pass_args=True))
