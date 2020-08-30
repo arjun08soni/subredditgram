@@ -1,16 +1,19 @@
 from telegram.ext import Updater, CommandHandler
 from telegram.error import (TelegramError, Unauthorized, BadRequest, TimedOut, ChatMigrated, NetworkError)
-from urllib.parse import urlparse
-import telegram                       
-import requests
-import re
-import urllib.request
-import json
-import tldextract
-import urllib
-import urllib.error
+import telegram        
 import praw
+import tldextract
+
+#from urllib.parse import urlparse
+#import requests
+#import re
+#import urllib.request
+#import json
+#import urllib
+#import urllib.error
+
 data=[]
+#calling python API reader
 reddit=praw.Reddit(client_id="your_client_id",client_secret="your_client_secret",user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36")
 
 def top(bot, update,args):
